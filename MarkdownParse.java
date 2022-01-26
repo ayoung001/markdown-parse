@@ -21,7 +21,8 @@ public class MarkdownParse {
             }
             if(markdown.substring(openParen+1, closeParen).contains(".") &&
                !markdown.substring(openParen+1, closeParen).contains(" ") &&
-               !markdown.substring(nextOpenBracket - 1, nextOpenBracket).contains("!")){
+               (nextOpenBracket == 0 ||
+               !markdown.substring(nextOpenBracket - 1, nextOpenBracket).contains("!"))){
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
                }
             currentIndex = closeParen + 1;
