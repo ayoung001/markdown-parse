@@ -8,3 +8,8 @@ MarkdownParse.class: MarkdownParse.java
 
 test: MarkdownParseTest.class
 	java -cp $(CLASSPATH) org.junit.runner.JUnitCore MarkdownParseTest 
+
+CLASSPATH = lib/*:.
+
+TryCommonMark.class: TryCommonMark.java
+	javac -g -cp $(CLASSPATH) TryCommonMark.java
